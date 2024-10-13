@@ -35,3 +35,10 @@ template<class T>
 T Height(Size2D<T>& In) {
 	return In.Y;
 }
+template<class T>
+bool ToZero(Size2D<T>& In) {
+	In.X = 0;
+	In.Y = 0;
+	
+	return true;
+}
