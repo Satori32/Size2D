@@ -1,11 +1,4 @@
-/** /
-#include <stdio.h>
-
-template<class T>
-struct Size2D{
-	T X = 0;
-	T Y = 0;
-};
+#include "Size2D.h"
 
 template<class T>
 Size2D<T> ConstructSize2D(T X, T Y) {
@@ -17,10 +10,10 @@ Size2D<T> ConstructSize2D(T X, T Y) {
 }
 
 template<class T>
-bool Resize(Size2D<T>& In,T X,T Y){
+bool Resize(Size2D<T>& In, T X, T Y) {
 	In.X = X;
 	In.Y = Y;
-	
+
 	return true;
 }
 template<class T>
@@ -41,15 +34,4 @@ T Width(Size2D<T>& In) {
 template<class T>
 T Height(Size2D<T>& In) {
 	return In.Y;
-}
-/**/
-
-#include "Size2D.h"
-
-int main() {
-	Size2D<int> S = ConstructSize2D<int>(1, 1);
-
-	Resize(S, 0, 0);
-
-	return 0;
 }
